@@ -4,13 +4,40 @@ import {
   ListItem,
   Divider,
   ListSubheader,
-  Grid,
+  Grid,Typography
 } from "@mui/material";
 
 export const MuiList = () => {
   const testItems = [...Array(100).keys()];
   return (
     <>
+    
+       <Box>
+        <List
+          sx={{
+            width: "100%",
+            position: "relative",
+            overflow: "auto",
+           
+            paddingTop: 0,
+            paddingBottom: 0,
+          }}
+        >
+        <ListItem>  <Grid container spacing={2}>
+                <Grid item xs={5}>
+                  Boat Class 
+                </Grid>
+                <Grid item xs={3}>
+                 <Typography align="left">PY</Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  Finish Time
+                </Grid>
+              </Grid> </ListItem>
+        </List>
+    
+    
+    </Box>
       <Box>
         <List
           sx={{
@@ -19,35 +46,19 @@ export const MuiList = () => {
             overflow: "auto",
             maxHeight: "100vh",
             paddingTop: 0,
-            paddingBottom: 0,
-          }}
-        >
-          <ListSubheader key="a1">
-            <Box sx={{ flexGrow: 1 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={5}>
-                  Class
-                </Grid>
-                <Grid item xs={3}>
-                  PY Num
-                </Grid>
-                <Grid item xs={4}>
-                  Finish Time
-                </Grid>
-              </Grid>
-            </Box>
-          </ListSubheader>
+            paddingBottom: 0}}>
+        
           <Divider />
           {testItems.map((item) => (
             <>
               <ListItem key={item}>
                 <Box sx={{ flexGrow: 1 }}>
                   <Grid container spacing={2}>
-                    <Grid item xs={6}>
+                    <Grid item xs={5}>
                       D Zero
-                    </Grid>
-                    <Grid item xs={2}>
-                      1011
+                    </Grid> 
+                    <Grid item xs={3}>
+                                       <Typography align="left">1101</Typography>
                     </Grid>
                     <Grid item xs={4}>
                       HH:mm:ss
@@ -63,3 +74,5 @@ export const MuiList = () => {
     </>
   );
 };
+
+
