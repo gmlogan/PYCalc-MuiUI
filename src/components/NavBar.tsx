@@ -13,7 +13,11 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-export const MuiNavbar = () => {
+interface PropTypes {
+  pageTitle: string;
+}
+
+export const NavBar = ({ pageTitle }: PropTypes) => {
   const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -27,7 +31,7 @@ export const MuiNavbar = () => {
               <MenuIcon style={{ color: "white" }} />
             </IconButton>
             <Typography variant="h6" component="div">
-              PYCalc
+              {pageTitle}
             </Typography>
           </Toolbar>
         </AppBar>

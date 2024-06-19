@@ -1,3 +1,11 @@
+import { Box } from "@mui/material";
+import { NavBar } from "./NavBar";
+
 export const EditBoats = () => {
-  return <div>EditBoats</div>;
+  return (
+    <>
+      <NavBar pageTitle="Edit Boats" />
+      <Box>Timings</Box>
+    </>
+  );
 };
